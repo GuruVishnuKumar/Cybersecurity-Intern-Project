@@ -23,6 +23,7 @@ cd Cybersecurity-Intern-Project
 pip install opencv-python numpy
 
 🎯 Usage
+
 🔹 Encryption (Hiding the Message)
 
 python encrypt.py
@@ -35,19 +36,23 @@ python decrypt.py
 Enter the password to reveal the secret message.
 
 📜 Code Explanation
+
 🔹 encrypt.py (Hides the message)
+
 Reads the image using OpenCV (cv2.imread()).
 Converts the message + password into binary.
 Hides the binary bits in the Least Significant Bits (LSB) of the image pixels.
 Saves the modified image as encryptedImage.png.
 
 🔹 decrypt.py (Extracts the message)
+
 Reads encryptedImage.png using OpenCV.
 Extracts the hidden bits from the LSB of pixels.
 Converts the binary data back to text.
 Checks the password before revealing the secret message.
 
 🛠️ Example
+
 Step 1: Encrypt
 
 $ python encrypt.py
@@ -62,6 +67,7 @@ Enter passcode for decryption: secret123
 Decryption Successful! Secret Message: Hello World!
 
 🛡️ Security Note
+
 This method provides basic security by hiding data inside an image.
 For better security, you can encrypt the message (e.g., AES Encryption) before hiding it.
 
